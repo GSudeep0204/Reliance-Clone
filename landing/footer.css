@@ -1,0 +1,11 @@
+#footer{
+    background-color: #1f4985;
+    justify-content: space-around;
+    color:white;
+}
+#footer>div{
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+}

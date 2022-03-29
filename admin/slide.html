@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="image" placeholder="urls">
+        <button>Submit</button>
+    </form>
+</body>
+
+<script>
+
+    var top = [];
+    var bottom = [];
+    document.querySelector("button").addEventListener("click",data);
+  function data(e){
+      e.preventDefault();
+      var object = {
+          img:document.querySelector("#image").value
+      }
+
+      top.push(object);
+      console.log(object);
+  }
+
+   console.log(top)
+</script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+       .flex{
+           display: flex;
+       }
+        #brand{
+            width:20%;
+            border: 5px solid red;
+            height:100%;
+         
+        }
+        #products{
+            width: 80%;
+            margin-left: 20px;
+        }
+      #prods{
+          height:80px;
+          width:100%;
+          border:solid grey 1px;
+      }
+      #items{
+         display:grid;
+         grid-template-columns: repeat(4,1fr);
+         
+      }
+
+      #items>div{
+          height:300px;
+          border:solid green 1px;
+          margin-top: 20px;
+          margin-right: 20px; 
+      }
+    </style>
+</head>
+<body>
+    <div id="mian" class="flex">
+    <div id="brand">
+       <div>
+           <h3>price</h3>
+           <div>
+              <input type="text" placeholder="min">
+               <p>To</p>
+               <input type="text" placeholder="max">
+           </div>
+       </div>
+<hr>
+<br>
+    <div>
+        <h3>category</h3>
+      <div>
+          <h4>  Laptops</h4>
+          <h4> Smartphones</h4>
+          <h4>Smart Wearables</h4>
+          <h4> Sports & Fitness Watches</h4>
+      </div>
+    </div>
+<hr>
+<br>
+    <div>
+        <h3>Brand</h3>
+        <div>
+            <h4>  Apple</h4>
+            <h4> Samsung</h4>
+            <h4>HP</h4>
+            <h4>  Lenovo</h4>
+        </div>
+    </div>
+    </div>
+
+    <div id="products">
+        <div id="prods">
+       </div>
+         <div id="items">
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+         </div>
+    </div>  
+</div>
+</body>
+</html>

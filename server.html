@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reliance Digital</title>
     <link rel="stylesheet" href="./landing/footer.css">
+    <link rel="stylesheet" href="./landing/slides.css">
+    <script src="./admin/slide.js"></script>
 
     <style>
         .flex{
@@ -28,7 +30,9 @@
     </style>
 </head>
 <body>
+       <div id="slide">
 
+       </div>
     
    <div >
        <div>
@@ -70,10 +74,15 @@
 
 <script type="module">
     import navbar from "../landing/footer.js";
+    import slide from "../landing/slides.js"
 
+    var s = slide();
+    var slides = document.getElementById("slide");
+     slides.innerHTML = s
+    console.log(slides)
     var div = document.getElementById("fooimp");
     var footer = navbar();
-    div.append(footer);
+    div.innerHTML=footer;
     console.log(footer);
 
     console.log(div);

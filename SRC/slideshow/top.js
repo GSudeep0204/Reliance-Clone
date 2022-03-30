@@ -1,8 +1,26 @@
-const mongoose = required("mongoose");
+ const express = require ("express");
 
-const imageSchema = new mongoose.Schema({
-  images:[{type:String,required:true}]
-})
 
-const Image = mongoose.model("image", imageSchema);
+ const app = express();
 
+ app.use(express.json());
+
+ app.get("/users",(req,res)=>{
+   try{
+    const user= create(req.body);
+    return res.send(user);
+   }
+   catch(e){
+     return res.send({message:e});
+   } 
+ })
+
+ app.listen(5500,()=>{
+   console.log("port listening on 5500")
+ })
+
+//  TvSchema = new mongoose.Schema({
+//    brandname:{type:String,required:true},
+//     model:{type:String,required:true},
+    
+//  }) 

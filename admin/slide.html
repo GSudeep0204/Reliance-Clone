@@ -11,12 +11,21 @@
         <input type="text" id="image" placeholder="urls">
         <button>Submit</button>
     </form>
+
+    <hr>
+<br>
+
+<hr>
+<form action="">
+    <input type="text" id="images" placeholder="urls">
+    <button id="button">Submit</button>
+</form>
 </body>
 
 <script>
 
-    var top = [];
-    var bottom = [];
+   var Top = JSON.parse(localStorage.getItem("slides")) || [];
+    var Bottom = JSON.parse(localStorage.getItem("slide")) || [];
     document.querySelector("button").addEventListener("click",data);
   function data(e){
       e.preventDefault();
@@ -24,10 +33,25 @@
           img:document.querySelector("#image").value
       }
 
-      top.push(object);
+      Top.push(object);
       console.log(object);
+      localStorage.setItem("slides",JSON.stringify(Top));
   }
 
-   console.log(top)
+  document.querySelector("#button").addEventListener("click",add);
+  function add(e){
+      e.preventDefault();
+      var object = {
+          img:document.querySelector("#images").value
+      }
+
+      Bottom.push(object);
+      console.log(object);
+      localStorage.setItem("slide",JSON.stringify(Bottom));
+  }
+
+
+
+
 </script>
 </html>

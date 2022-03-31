@@ -4,10 +4,12 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+app.use(express.json());
+
 const Tv = require("./controllers/tv.controller");
 const connect = require("./configs/db");
 
-app.use("/tvs",Tv);
+app.use("",Tv);
 
 
 app.listen(5500,()=>{

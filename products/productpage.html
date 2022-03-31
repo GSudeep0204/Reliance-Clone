@@ -103,3 +103,14 @@
 </div>
 </body>
 </html>
+
+<script>
+    url = "http://localhost:5500/tvs";
+    const data = async ()=>{
+      const dat = await fetch(url);
+      const user = await dat.json();
+      console.log(user);
+     }
+
+     data();
+</script>

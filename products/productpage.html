@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+    <link rel="stylesheet" href="../landing/footer.css">
     <style>
        .flex{
            display: flex;
@@ -31,11 +32,29 @@
       }
 
       #items>div{
-          height:300px;
+          height:400px;
           border:solid green 1px;
           margin-top: 20px;
           margin-right: 20px; 
       }
+      #items>div>div{
+        
+         width:100%;
+         /* border: solid red 1px;
+          */ 
+      }
+      #items>div>div>img{
+          height:200px;
+          align-content: center;
+          /* border: solid red 1px; */
+         
+      }
+      #items>div>div>h2{
+          display: flex;
+      }
+
+      
+      
     </style>
 </head>
 <body>
@@ -77,40 +96,58 @@
         <div id="prods">
        </div>
          <div id="items">
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
+            
          </div>
     </div>  
+<hr>
+<br>
 </div>
+<br>
+<hr>
+<div id="footer"></div>
 </body>
 </html>
 
-<script>
-    url = "http://localhost:5500/tvs";
+<script type="module">
+
+import footer from "../landing/footer.js";
+var footertext = footer();
+  let footerdiv = document.getElementById("footer");
+  footerdiv.innerHTML=footer;
+ console.log(footerdiv)
+    var mobiles = "mobiles"
+    let url = `http://localhost:5500/${mobiles}`;
     const data = async ()=>{
       const dat = await fetch(url);
       const user = await dat.json();
       console.log(user);
+      display(user)
      }
+   data()
+    
+    function display(user){
+        user.map(function(elem){
+            let div = document.querySelector("#items")
+           let maindiv = document.createElement("div");
+           let imgdiv = document.createElement("div");
+           let img = document.createElement("img");
+           img.src = elem.gallery[0];
+           let h2div = document.createElement("div");
+           let model = document.createElement("h3");
+           model.textContent = `${elem.brand} ${elem.size} ${elem.model}`;
+           let pricediv=document.createElement("div");
+           let  withprice = document.createElement("h2");
+           withprice.textContent = `${""+elem.wprice}`
+           let woprice = document.createElement("h2");
+           woprice =`${""+elem.woprice}`;
+           pricediv.append( withprice,woprice)
+           h2div.append(model);
+           imgdiv.append(img);
+           maindiv.append(imgdiv,h2div,pricediv); 
+           div.append(maindiv);
 
-     data();
+           console.log(div);
+        })
+    }
+     
 </script>

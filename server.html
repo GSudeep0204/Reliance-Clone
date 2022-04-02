@@ -7,8 +7,9 @@
     <title>Reliance Digital</title>
     <link rel="stylesheet" href="./landing/footer.css">
     <link rel="stylesheet" href="./landing/slides.css">
+    <link rel="stylesheet" href="./landing/header.css">
     <script src="./admin/slide.js"></script>
-
+     <script src="./server.js"></script>
     <style>
         .flex{
            display: flex; 
@@ -27,9 +28,16 @@
            margin: 30px;
            width:90%;
        }
+       #api{
+           display: grid;
+           grid-template-columns: repeat(4,1fr);
+
+       }
     </style>
 </head>
 <body>
+
+    <div id="header"></div>
        <div id="slide">
 
        </div>
@@ -62,9 +70,21 @@
           <img src="https://www.reliancedigital.in/medias/Best-Deals-in-Juicers-and-Mixer-Grinders.jpg?context=bWFzdGVyfGltYWdlc3w1MjA0NXxpbWFnZS9qcGVnfGltYWdlcy9oNWEvaGZmLzk3ODk2MzY2NDA3OTguanBnfGIzMDc2M2Q0NWQ2ZmRlNzQyNzY1OTQ5ZGUxYTJjZDVjYWMwMDFhNGQ0YzUyNDdjYzFiNTViM2NlZmEyNWFmNGE" alt="">
        </div>
        <hr>
+       <div id="slides">
+           
+       </div>
+       <hr>
+       <div id="api">
+          <img id="mobiles" src="https://www.reliancedigital.in/medias/iphone-pro-11-01.png?context=bWFzdGVyfGltYWdlc3wyOTc3NnxpbWFnZS9wbmd8aW1hZ2VzL2gxNi9oNWUvOTI3NjA1OTkxMDE3NC5wbmd8MzdkYzljODgzMDcyM2ZjMjJmZDI2ZjMwNjhkZmU5YjFmOTJmMGRmOTFiYzc4ZjcyMDRhMjQ5MWMyNjYwOTgxYg" alt="">
+          <img src="https://www.reliancedigital.in/medias/Laptop-180x180-15-01-2019.png?context=bWFzdGVyfGltYWdlc3wyOTAwOXxpbWFnZS9wbmd8aW1hZ2VzL2g0Mi9oNTYvOTI1MTA1MDYxODkxMC5wbmd8N2ZjYTg0ZDAyOTZmMmQ5OTZhZDNiM2M4NDg0ZDgxY2UyNzNjMmJiYzMwZTZiOGQwOWE5N2JlZDI4M2ViMGZjNw" alt="">
+          <img src="https://www.reliancedigital.in/medias/TV-180x180-15-01-2019.png?context=bWFzdGVyfGltYWdlc3w0OTM4M3xpbWFnZS9wbmd8aW1hZ2VzL2g1ZC9oMTEvOTI1MTA1MDU1MzM3NC5wbmd8MThiNmU4NTZiNWI5MTE1ZGVjYjA4ZjIwM2QwZjUyMzFlOGExZTY0YmQ0MTRkYTkyN2M2MDZiYzUzZDY1ZjM4Ng" alt="">
+          <img src="https://www.reliancedigital.in/medias/Watch-180x180-27-02-2020.png?context=bWFzdGVyfGltYWdlc3w2Njk2fGltYWdlL3BuZ3xpbWFnZXMvaGQ1L2g2My85MjUzNTA3NTk2MzE4LnBuZ3w4NmEwODU5NDI5YzVlMzJjNzRlNzNlYmJkMmJmYTZjMTI2OWY0YTUxYWU3YzMzM2E3YTc5YjljZmU4ZGMyNGQ2" alt="">
+       </div>
+       <br>
+       <hr>
    </div>
 
-
+      
 
    <div id="fooimp">
      
@@ -73,18 +93,31 @@
 </html>
 
 <script type="module">
-    import navbar from "../landing/footer.js";
-    import slide from "../landing/slides.js"
+    import footer from "../landing/footer.js";
+    import slide from "../landing/slides.js";
+    import navbar from "../landing/header.js";
+    
 
     var s = slide();
     var slides = document.getElementById("slide");
      slides.innerHTML = s
-    console.log(slides)
     var div = document.getElementById("fooimp");
-    var footer = navbar();
-    div.innerHTML=footer;
+    var footerdiv = footer();
+    div.innerHTML=footerdiv;
     console.log(footer);
 
-    console.log(div);
+    var header = document.getElementById("header");
+    var navbardiv = navbar();
+    header.innerHTML=navbar;
+    console.log(header)
+
+
+     document.querySelector("#mobiles").addEventListener("click",function(){
+         console.log("sudeep")
+         window.location.href="../products/productpage.html";
+})
+    
+
+
 
 </script>

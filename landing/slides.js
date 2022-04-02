@@ -88,7 +88,6 @@ function slide(){
     <span class="dot" onclick="currentSlide(9)"></span>
     <span class="dot" onclick="currentSlide(10)"></span>
     <span class="dot" onclick="currentSlide(11)"></span>
-   
   </div>`
 }
 export default slide

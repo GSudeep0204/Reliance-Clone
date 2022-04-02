@@ -22,6 +22,14 @@
         height:60%;
         margin-top: 20px;
     }
+    #social{
+        margin-right:100px ;
+        color: white;
+    }
+    #social>div{
+        margin-left:20px ;
+    }
+
     #search{
         margin:auto;
         width: 40%;
@@ -45,10 +53,9 @@
    #options{
     justify-content: space-around;
     color:white;
-   }
-   #options{
-       background-color: blue;
-       height:50px;
+    background-color: blue;
+    height:50px;
+    display: flex;
    }
 
    #dis{
@@ -61,8 +68,7 @@
    }
    #options:hover>div{
        cursor: pointer;
-       display: block;
-      
+ 
    }
    #mobile{
        color:black;
@@ -77,53 +83,26 @@
         <button id="search-button">Search</button>
      </div>
      <div id="social" class="flex">
-         <div >
+         <div>
             <h4>Cart</h4>
             <img src="" alt="">
          </div>
-          <div>
+          <div  onclick="register()">
               <h4>Login</h4>
+              
           </div>
      </div>
       
     </div>
     <div id="options" class="flex">
-         <div id=""> mobiles and tablets
-            <div class="none" id="mobile">
-              <p>sudeep </p>
-              <p>sudeep </p>
-            
-            </div>
-             <img src="" alt="">
-         </div>
-         <div>
-            <h3>Sudeep</h3>
-            <img src="" alt="">
-        </div>
-        <div>
-            
-            <img src="" alt="">
-        </div>
-        <div>
-            <h3>Sudeep</h3>
-            <img src="" alt="">
-        </div>
-        <div>
-            <h3>Sudeep</h3>
-            <img src="" alt="">
-        </div>
-        <div>
-            <h3>Sudeep</h3>
-            <img src="" alt="">
-        </div>
-        <div>
-            <h3>Sudeep</h3>
-            <img src="" alt="">
-        </div>
-        <div>
-            <h3>Sudeep</h3>
-            <img src="" alt="">
-        </div>
+        <div id=""> <h3> mobiles and tablets</h3></div>
+        <div id=""> <h3>TV & AUDIO</h3></div>
+        <div id=""><h3>HOME APPLIANCES</h3></div>
+        <div id=""> <h3>COMPUTERS</h3></div>
+        <div id=""><h3>CAMERAS</h3></div>
+        <div id=""> <h3>KITCHEN APPLIANCES</h3></div>
+        <div id=""> <h3>PERSONAL CARE</h3></div>
+        <div id=""> <h3>ACCESSORIES</h3></div> 
     </div>
 </body>
 </html>
